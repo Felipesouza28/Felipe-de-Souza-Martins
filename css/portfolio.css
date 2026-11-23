@@ -112,7 +112,7 @@ button { font: inherit; }
 .preview-browser-bar { position: absolute; z-index: 2; top: 0; left: 0; right: 0; display: flex; height: 1.8rem; align-items: center; gap: .28rem; padding: 0 .65rem; border-bottom: 1px solid #DDE4EF; background: #F9FBFE; pointer-events: none; }
 .preview-browser-bar > span { width: .38rem; height: .38rem; border-radius: 50%; background: #C2CCDA; }
 .preview-browser-bar small { margin-left: .4rem; color: #8190A6; font-size: .52rem; font-weight: 800; letter-spacing: .12em; }
-.project-preview iframe { display: block; width: 100%; height: calc(100% + 1.8rem); margin-top: 1.8rem; border: 0; background: #fff; }
+.project-preview iframe { display: block; width: 100%; height: calc(100% - 1.8rem); margin-top: 1.8rem; border: 0; background: #fff; }
 .preview-overlay-link { position: absolute; z-index: 3; inset: 1.8rem 0 0; display: block; }
 .project-feature-info { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr); gap: 2.2rem; padding: 1.55rem .6rem .5rem; }
 .project-category { margin: 0 0 .42rem; color: var(--blue); font-size: .61rem; font-weight: 800; letter-spacing: .13em; }
