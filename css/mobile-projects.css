@@ -201,3 +201,95 @@
     min-height: 7rem;
   }
 }
+
+
+/* Correção de overflow horizontal no mockup ClimaGestão. */
+@media (max-width: 42rem) {
+  #projetos .preview-browser {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #projetos .preview-top {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    gap: .45rem;
+    overflow: hidden;
+  }
+
+  #projetos .preview-top > span:nth-child(2) {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  #projetos .preview-top b {
+    flex: 0 0 1.2rem;
+    min-width: 1.2rem;
+  }
+
+  #projetos .preview-dashboard {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  #projetos .preview-main {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  #projetos .preview-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    min-width: 0;
+    gap: .35rem;
+  }
+
+  #projetos .preview-stats div {
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    padding-inline: .4rem;
+  }
+
+  #projetos .preview-stats small,
+  #projetos .preview-stats b {
+    display: block;
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  #projetos .preview-stats b {
+    font-size: clamp(.62rem, 2.5vw, .78rem);
+  }
+
+  #projetos .preview-chart {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  #projetos .preview-chart span {
+    min-width: 0;
+  }
+}
