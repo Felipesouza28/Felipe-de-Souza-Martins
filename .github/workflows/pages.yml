@@ -62,7 +62,7 @@ html = page.read_text(encoding="utf-8")
 marker = "</head>"
 if marker not in html:
     raise SystemExit("Não foi possível inserir o CSS mobile: </head> ausente.")
-html = html.replace(marker, '  <link rel="stylesheet" href="css/mobile-projects.css">\\n</head>', 1)
+html = html.replace(marker, '  <link rel="stylesheet" href="css/mobile-projects.css">' + chr(10) + marker, 1)
 page.write_text(html, encoding="utf-8")
 PY
             fi
