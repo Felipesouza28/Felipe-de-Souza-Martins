@@ -293,3 +293,34 @@
     min-width: 0;
   }
 }
+
+
+/* Escala e centralização comum das três miniaturas em telas pequenas. */
+@media (max-width: 42rem) {
+  #projetos .project-preview {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #projetos .project-preview > .preview-browser,
+  #projetos .project-preview > .preview-site,
+  #projetos .project-preview > .preview-books {
+    box-sizing: border-box;
+    flex: 0 1 94%;
+    width: 94%;
+    min-width: 0;
+    max-width: 100%;
+    margin-inline: auto;
+    align-self: center;
+    transform: none;
+  }
+
+  #projetos .preview-browser *,
+  #projetos .preview-site *,
+  #projetos .preview-books * {
+    min-width: 0;
+  }
+}
