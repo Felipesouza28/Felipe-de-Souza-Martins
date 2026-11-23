@@ -33,10 +33,9 @@ jobs:
           cat portfolio-source/part-*.b64 > /tmp/portfolio.tar.gz.b64
           base64 --decode /tmp/portfolio.tar.gz.b64 | tar -xz -C _site
 
-          echo "Arquivos extraídos (até 4 níveis):"
-          find _site -maxdepth 4 -type f | sort | head -80
+          echo "Arquivos extraídos:"
+          find _site -maxdepth 5 -type f | sort
 
-          # GitHub Pages precisa encontrar o index.html na raiz do artefato.
           if [ ! -f _site/index.html ]; then
             nested_index="$(find _site -mindepth 2 -type f -name index.html -print -quit)"
             if [ -n "$nested_index" ]; then
@@ -56,6 +55,14 @@ jobs:
 
           base64 --decode portfolio-source/briefing-enhancement.js.gz.b64 | gzip -dc >> _site/js/main.js
           touch _site/.nojekyll
+
+          echo "=== INDEX.HTML TITLE / META / FIRST CONTENT ==="
+          grep -Eio '<title[^>]*>[^<]*|<meta[^>]+|<h1[^>]*>[^<]*|<body[^>]*>' _site/index.html | head -60 || true
+          echo "=== INDEX.HTML FIRST 10000 BYTES ==="
+          head -c 10000 _site/index.html
+          echo
+          echo "=== CSS AND JS SIZES ==="
+          wc -c _site/index.html _site/css/*.css _site/js/main.js
           echo "Homepage pronta: _site/index.html"
       - name: Enviar artefato
         uses: actions/upload-pages-artifact@v4
