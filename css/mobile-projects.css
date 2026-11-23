@@ -1,0 +1,203 @@
+/* Ajustes de leitura para as prévias dos projetos em telas pequenas. */
+@media (max-width: 42rem) {
+  #projetos .project-preview {
+    min-height: 18rem;
+    aspect-ratio: 4 / 3;
+    padding: 1rem 1rem 2rem;
+    align-items: center;
+  }
+
+  #projetos .preview-browser,
+  #projetos .preview-site,
+  #projetos .preview-books {
+    width: 100%;
+    max-width: 100%;
+    transform: none;
+    border-radius: .65rem;
+    box-shadow: 0 12px 28px rgb(0 0 0 / .28);
+  }
+
+  #projetos .preview-caption {
+    right: .75rem;
+    bottom: .45rem;
+    font-size: .52rem;
+    letter-spacing: .02em;
+  }
+
+  /* ClimaGestão: retira a navegação comprimida e amplia o painel. */
+  #projetos .preview-dashboard {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 12.5rem;
+  }
+
+  #projetos .preview-sidebar {
+    display: none;
+  }
+
+  #projetos .preview-main {
+    min-width: 0;
+    padding: .85rem;
+  }
+
+  #projetos .preview-main > small {
+    font-size: .55rem;
+  }
+
+  #projetos .preview-main h4 {
+    margin: .3rem 0 .75rem;
+    font-size: 1.05rem;
+  }
+
+  #projetos .preview-stats {
+    gap: .5rem;
+  }
+
+  #projetos .preview-stats div {
+    min-width: 0;
+    padding: .55rem .5rem;
+  }
+
+  #projetos .preview-stats small {
+    font-size: .52rem;
+  }
+
+  #projetos .preview-stats b {
+    overflow-wrap: anywhere;
+    font-size: .78rem;
+  }
+
+  #projetos .preview-chart {
+    height: 3.5rem;
+    gap: .25rem;
+    margin-top: .75rem;
+  }
+
+  /* Itechub: duas colunas para evitar cards estreitos demais. */
+  #projetos .preview-site__nav {
+    padding: .7rem .85rem;
+  }
+
+  #projetos .preview-site__nav b {
+    font-size: .9rem;
+  }
+
+  #projetos .preview-site__nav > span {
+    display: none;
+  }
+
+  #projetos .preview-site__hero {
+    padding: 1rem 1.05rem .8rem;
+  }
+
+  #projetos .preview-site__hero small {
+    font-size: .5rem;
+  }
+
+  #projetos .preview-site__hero h4 {
+    margin: .4rem 0;
+    font-size: 1.3rem;
+  }
+
+  #projetos .preview-site__hero p {
+    font-size: .64rem;
+  }
+
+  #projetos .preview-search {
+    margin-top: .7rem;
+    padding: .6rem .7rem;
+    font-size: .62rem;
+  }
+
+  #projetos .preview-site__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .45rem;
+    padding: .65rem .85rem .8rem;
+  }
+
+  #projetos .preview-site__cards div {
+    min-width: 0;
+    gap: .2rem;
+    padding: .5rem;
+  }
+
+  #projetos .preview-site__cards b {
+    font-size: .9rem;
+  }
+
+  #projetos .preview-site__cards strong {
+    font-size: .58rem;
+  }
+
+  #projetos .preview-site__cards small {
+    overflow-wrap: anywhere;
+    font-size: .48rem;
+  }
+
+  /* MatchBook: capas maiores, com títulos mais legíveis. */
+  #projetos .preview-books {
+    padding: .95rem .9rem .75rem;
+  }
+
+  #projetos .preview-books__head b {
+    font-size: 1.05rem;
+  }
+
+  #projetos .preview-books__head small {
+    font-size: .58rem;
+  }
+
+  #projetos .book-row {
+    gap: .8rem;
+    padding: .9rem .15rem .7rem;
+  }
+
+  #projetos .book-cover {
+    width: 27%;
+    min-height: 7.5rem;
+    padding: .5rem .4rem;
+  }
+
+  #projetos .book-cover small {
+    font-size: .42rem;
+  }
+
+  #projetos .book-cover b {
+    font-size: .65rem;
+  }
+
+  #projetos .preview-books__foot {
+    font-size: .43rem;
+  }
+
+  #projetos .project__links {
+    width: 100%;
+  }
+
+  #projetos .project__links .btn {
+    flex: 1 1 8rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 22.5rem) {
+  #projetos .project-preview {
+    padding-inline: .7rem;
+  }
+
+  #projetos .preview-site__hero h4 {
+    font-size: 1.15rem;
+  }
+
+  #projetos .preview-site__cards small {
+    font-size: .43rem;
+  }
+
+  #projetos .book-row {
+    gap: .55rem;
+  }
+
+  #projetos .book-cover {
+    width: 29%;
+    min-height: 7rem;
+  }
+}
