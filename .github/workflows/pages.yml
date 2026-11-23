@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -33,37 +33,45 @@ jobs:
           cat portfolio-source/part-*.b64 > /tmp/portfolio.tar.gz.b64
           base64 --decode /tmp/portfolio.tar.gz.b64 | tar -xz -C _site
 
-          echo "Arquivos extraídos:"
-          find _site -maxdepth 5 -type f | sort
-
+          # O artefato precisa ter o index.html na raiz.
           if [ ! -f _site/index.html ]; then
             nested_index="$(find _site -mindepth 2 -type f -name index.html -print -quit)"
-            if [ -n "$nested_index" ]; then
-              nested_root="$(dirname "$nested_index")"
-              echo "index.html encontrado em $nested_root; movendo o conteúdo para a raiz."
-              cp -a "$nested_root"/. _site/
-            else
+            if [ -z "$nested_index" ]; then
               echo "::error::index.html não foi encontrado no pacote do portfólio."
               exit 1
             fi
+            nested_root="$(dirname "$nested_index")"
+            cp -a "$nested_root"/. _site/
           fi
 
           if [ ! -f _site/js/main.js ]; then
-            echo "::error::js/main.js não foi encontrado na raiz publicada."
+            echo "::error::js/main.js não foi encontrado."
             exit 1
           fi
 
           base64 --decode portfolio-source/briefing-enhancement.js.gz.b64 | gzip -dc >> _site/js/main.js
           touch _site/.nojekyll
 
-          echo "=== INDEX.HTML TITLE / META / FIRST CONTENT ==="
-          grep -Eio '<title[^>]*>[^<]*|<meta[^>]+|<h1[^>]*>[^<]*|<body[^>]*>' _site/index.html | head -60 || true
-          echo "=== INDEX.HTML FIRST 10000 BYTES ==="
-          head -c 10000 _site/index.html
-          echo
-          echo "=== CSS AND JS SIZES ==="
-          wc -c _site/index.html _site/css/*.css _site/js/main.js
-          echo "Homepage pronta: _site/index.html"
+      # Mantém também uma versão estática na raiz da branch main.
+      # Isso evita que o GitHub Pages exiba o README caso esteja configurado
+      # para publicar a branch em vez do artefato do GitHub Actions.
+      - name: Sincronizar site na raiz do repositório
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf css js
+          cp -a _site/index.html _site/.nojekyll .
+          cp -a _site/css _site/js .
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html .nojekyll css js
+          if git diff --cached --quiet; then
+            echo "A raiz do repositório já está sincronizada."
+          else
+            git commit -m "build: sincroniza arquivos do site publicado"
+            git push origin HEAD:main
+          fi
+
       - name: Enviar artefato
         uses: actions/upload-pages-artifact@v4
         with:
