@@ -1,6 +1,5 @@
 (() => {
   "use strict";
-
   const body = document.body;
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".primary-nav");
@@ -13,9 +12,9 @@
 
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
-      const open = body.classList.toggle("menu-open");
-      toggle.setAttribute("aria-expanded", String(open));
-      toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+      const isOpen = body.classList.toggle("menu-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
     });
     nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
     document.addEventListener("keydown", (event) => {
@@ -25,7 +24,7 @@
       if (body.classList.contains("menu-open") && !event.target.closest(".site-header")) closeMenu();
     });
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 736) closeMenu();
+      if (window.innerWidth > 768) closeMenu();
     });
   }
 
