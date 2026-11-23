@@ -260,3 +260,94 @@ button { font: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+
+/* Refinamento visual: hierarquia e leitura dos projetos */
+.hero h1 { max-width: 11.5ch; }
+.hero-proof { max-width: 37rem; }
+.hero-proof p { color: #B5C4DB; }
+.hero-orbit { opacity: .55; }
+
+.project-feature { padding: 1rem; }
+.project-feature-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(19rem, .82fr);
+  gap: clamp(1.25rem, 2.6vw, 2.1rem);
+  align-items: stretch;
+}
+.project-preview-feature {
+  height: 100%;
+  min-height: 25rem;
+  max-height: 33rem;
+}
+.project-feature-info {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .7rem .4rem .25rem 0;
+}
+.feature-copy { min-width: 0; }
+.project-feature h3 { font-size: clamp(1.7rem, 2.4vw, 2.15rem); }
+.project-feature .project-description { font-size: .8rem; }
+.feature-list-label {
+  display: block;
+  margin-top: 1.2rem;
+  color: #8796AA;
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+}
+.project-feature-list {
+  display: grid;
+  gap: .55rem;
+  margin: .65rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.project-feature-list li {
+  position: relative;
+  padding-left: 1.05rem;
+  color: #50627B;
+  font-size: .75rem;
+  line-height: 1.55;
+}
+.project-feature-list li::before {
+  position: absolute;
+  top: .58rem;
+  left: 0;
+  width: .35rem;
+  height: .35rem;
+  border-radius: 50%;
+  background: var(--cyan);
+  content: "";
+}
+.feature-bottom { margin-top: 1rem; }
+.feature-bottom .project-stack { margin-top: 0; }
+.feature-bottom .project-note { margin: .75rem 0 0; }
+.feature-bottom .project-actions { margin-top: .85rem; }
+.compact-list { gap: .4rem; margin-top: .8rem; }
+.compact-list li { font-size: .72rem; }
+.project-card-body { padding-top: 1.1rem; }
+.project-card .project-description { min-height: 0; }
+.project-card .project-feature-list { min-height: 5.1rem; }
+.project-card .project-actions { margin-top: 1rem; }
+
+@media (max-width: 62rem) {
+  .project-feature-layout { grid-template-columns: minmax(0, 1fr) minmax(17rem, .85fr); gap: 1.25rem; }
+  .project-preview-feature { min-height: 24rem; }
+}
+@media (max-width: 48rem) {
+  .project-feature-layout { grid-template-columns: 1fr; }
+  .project-preview-feature { height: 20rem; min-height: 0; max-height: none; }
+  .project-feature-info { padding: .5rem .4rem .2rem; }
+  .project-feature h3 { font-size: 1.8rem; }
+  .feature-bottom { margin-top: .4rem; }
+  .project-card .project-feature-list { min-height: 0; }
+}
+@media (max-width: 27rem) {
+  .project-preview-feature { height: 17rem; }
+  .project-feature-top { gap: .6rem; }
+  .project-feature .project-actions { flex-direction: column; align-items: flex-start; }
+}
