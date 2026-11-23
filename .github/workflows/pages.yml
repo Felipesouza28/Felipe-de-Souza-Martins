@@ -55,16 +55,7 @@ jobs:
           if [ -f css/mobile-projects.css ]; then
             cp css/mobile-projects.css _site/css/mobile-projects.css
             if ! grep -q 'css/mobile-projects.css' _site/index.html; then
-              python3 - <<'PY'
-from pathlib import Path
-page = Path("_site/index.html")
-html = page.read_text(encoding="utf-8")
-marker = "</head>"
-if marker not in html:
-    raise SystemExit("Não foi possível inserir o CSS mobile: </head> ausente.")
-html = html.replace(marker, '  <link rel="stylesheet" href="css/mobile-projects.css">' + chr(10) + marker, 1)
-page.write_text(html, encoding="utf-8")
-PY
+              sed -i 's#</head>#  <link rel="stylesheet" href="css/mobile-projects.css"></head>#' _site/index.html
             fi
           else
             echo "::error::css/mobile-projects.css não encontrado na raiz do repositório."
