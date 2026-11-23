@@ -17,21 +17,13 @@
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
     });
-
-    nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-
+    nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeMenu();
     });
-
     document.addEventListener("click", (event) => {
-      if (body.classList.contains("menu-open") && !event.target.closest(".site-header")) {
-        closeMenu();
-      }
+      if (body.classList.contains("menu-open") && !event.target.closest(".site-header")) closeMenu();
     });
-
     window.addEventListener("resize", () => {
       if (window.innerWidth > 736) closeMenu();
     });

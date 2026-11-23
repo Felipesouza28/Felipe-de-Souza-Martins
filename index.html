@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f3f1eb">
-  <meta name="description" content="Felipe Martins — desenvolvedor web em formação. Projetos de front-end, WordPress e Elementor.">
+  <meta name="theme-color" content="#f5f6f2">
+  <meta name="description" content="Portfólio de Felipe Martins, desenvolvedor web em formação. Experiência com WordPress, Elementor e projetos front-end.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Felipe Martins — Desenvolvedor Web">
-  <meta property="og:description" content="Projetos, experiência e trajetória em desenvolvimento web.">
+  <meta property="og:description" content="Projetos, experiência e competências em desenvolvimento web.">
   <title>Felipe Martins — Desenvolvedor Web</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;650;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/portfolio.css">
   <script src="js/main.js" defer></script>
 </head>
@@ -21,8 +21,8 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#inicio" aria-label="Felipe Martins — início">
-        <span class="brand-mark">FM</span>
-        <span class="brand-name">Felipe Martins<span class="brand-period">.</span></span>
+        <span class="brand-symbol">FM</span>
+        <span>Felipe Martins<span class="brand-dot">.</span></span>
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu">
@@ -32,8 +32,8 @@
       <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#competencias">Competências</a></li>
-          <li><a href="#trajetoria">Trajetória</a></li>
+          <li><a href="#atuacao">Atuação</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a class="nav-contact" href="#contato">Contato <span aria-hidden="true">↗</span></a></li>
         </ul>
@@ -44,200 +44,248 @@
   <main id="conteudo">
     <section class="hero" id="inicio">
       <div class="container">
-        <div class="hero-topline">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> Portfólio pessoal <span class="eyebrow-separator">/</span> Brasília, Brasil</p>
-          <p class="hero-index">DESENVOLVIMENTO WEB · 2026</p>
+        <div class="hero-eyebrow">
+          <span class="status-mark" aria-hidden="true"></span>
+          <span>Desenvolvedor Web · Brasília, DF</span>
+          <span class="eyebrow-rule"></span>
+          <span class="eyebrow-muted">Portfólio 2026</span>
         </div>
 
         <div class="hero-grid">
           <div class="hero-main">
-            <h1>Desenvolvimento web com <em>intenção e clareza.</em></h1>
+            <h1>Crio e aprimoro <em>experiências</em> para a web.</h1>
             <p class="hero-intro">
-              Sou Felipe Martins, desenvolvedor web em formação. Tenho experiência prática com criação e manutenção de páginas e trabalho com WordPress, Elementor e fundamentos de front-end.
+              Sou Felipe Martins. Trabalho com criação e manutenção de páginas usando WordPress e Elementor, e desenvolvo projetos próprios com HTML, CSS e JavaScript.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#projetos">Conheça meu trabalho <span aria-hidden="true">↓</span></a>
-              <a class="button button-text" href="mailto:felipeffsm@gmail.com">Vamos conversar <span aria-hidden="true">↗</span></a>
+              <a class="button button-primary" href="#projetos">Ver projetos <span aria-hidden="true">↓</span></a>
+              <a class="button button-secondary" href="mailto:felipeffsm@gmail.com">Entrar em contato <span aria-hidden="true">↗</span></a>
             </div>
           </div>
 
-          <aside class="hero-aside" aria-label="Resumo profissional">
-            <div class="aside-item">
-              <span class="aside-label">Atuação atual</span>
-              <p>Estagiário de programação</p>
-              <span class="aside-detail">Conectando Pessoas</span>
+          <aside class="profile-panel" aria-label="Resumo profissional">
+            <div class="panel-heading">
+              <span class="panel-label">Resumo profissional</span>
+              <span class="panel-mark" aria-hidden="true">↘</span>
             </div>
-            <div class="aside-item">
-              <span class="aside-label">Formação</span>
-              <p>Análise e Desenvolvimento de Sistemas</p>
-              <span class="aside-detail">Uniasselvi · em andamento</span>
+            <div class="profile-row">
+              <span class="profile-label">Atualmente</span>
+              <div>
+                <strong>Estagiário de programação</strong>
+                <small>Conectando Pessoas</small>
+              </div>
             </div>
-            <div class="aside-item">
-              <span class="aside-label">Foco</span>
-              <p>Interfaces web e criação de sites</p>
-              <span class="aside-detail">Front-end · WordPress · Elementor</span>
+            <div class="profile-row">
+              <span class="profile-label">Formação</span>
+              <div>
+                <strong>Análise e Desenvolvimento de Sistemas</strong>
+                <small>Uniasselvi · em andamento</small>
+              </div>
+            </div>
+            <div class="profile-row">
+              <span class="profile-label">Foco</span>
+              <div>
+                <strong>Sites e interfaces web</strong>
+                <small>WordPress · Elementor · Front-end</small>
+              </div>
             </div>
           </aside>
         </div>
 
         <div class="hero-bottom">
-          <span>HTML <i>·</i> CSS <i>·</i> JavaScript <i>·</i> WordPress</span>
-          <a href="#projetos" aria-label="Rolar para projetos">Role para explorar <span aria-hidden="true">↓</span></a>
+          <span class="hero-bottom-label">No meu dia a dia</span>
+          <div class="hero-stack" aria-label="Tecnologias">
+            <span>WordPress</span><i>·</i><span>Elementor</span><i>·</i><span>HTML</span><i>·</i><span>CSS</span><i>·</i><span>JavaScript</span>
+          </div>
+          <a href="#projetos">Explorar trabalho <b aria-hidden="true">↓</b></a>
         </div>
       </div>
     </section>
 
-    <section class="section work-section" id="projetos" aria-labelledby="work-title">
+    <section class="section projects-section" id="projetos" aria-labelledby="projects-title">
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">01 / Trabalho selecionado</p>
-            <h2 id="work-title">Projetos<span class="heading-period">.</span></h2>
+            <p class="section-kicker">01 <span>/</span> Projetos selecionados</p>
+            <h2 id="projects-title">Trabalho em <em>prática.</em></h2>
           </div>
-          <p class="section-summary">
-            Projetos autorais e acadêmicos em que aplico o que estudo, exploro soluções e transformo ideias em experiências navegáveis.
+          <p class="section-description">
+            Projetos autorais e acadêmicos que mostram como aplico meus conhecimentos para estruturar interfaces e resolver necessidades específicas.
           </p>
         </div>
 
-        <div class="work-list">
-          <article class="work-item work-clima">
-            <div class="work-number">01</div>
-            <div class="work-content">
-              <div class="work-meta"><span>Projeto autoral</span><span>Dashboard web</span></div>
-              <h3>ClimaGestão</h3>
-              <p>
-                Protótipo de um painel para empresas de instalação e manutenção de ar-condicionado. Desenvolvi o fluxo de cadastro e gerenciamento de clientes, com consulta, edição, exclusão e busca, além de telas demonstrativas para outras áreas da operação.
-              </p>
-              <p class="work-caveat">Demonstração com dados armazenados localmente no navegador. Não é um sistema pronto para produção.</p>
-              <ul class="tech-list" aria-label="Tecnologias utilizadas">
-                <li>HTML</li><li>CSS</li><li>JavaScript</li>
-              </ul>
+        <article class="project-feature project-clima">
+          <div class="project-feature-main">
+            <div class="project-meta">
+              <span class="project-number">01</span>
+              <span class="project-type">Projeto autoral</span>
+              <span class="project-divider">/</span>
+              <span class="project-type">Dashboard web</span>
             </div>
-            <div class="work-actions">
-              <a href="https://felipesouza28.github.io/Painel-de-Controle-Dashboard-/" target="_blank" rel="noopener noreferrer">Ver demonstração <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/Felipesouza28/Painel-de-Controle-Dashboard-" target="_blank" rel="noopener noreferrer">Código no GitHub <span aria-hidden="true">↗</span></a>
+            <h3>ClimaGestão</h3>
+            <p class="project-summary">
+              Um protótipo de painel de gestão pensado para empresas de instalação e manutenção de ar-condicionado.
+            </p>
+            <div class="project-result">
+              <span class="detail-label">O que foi desenvolvido</span>
+              <p>Fluxo de cadastro e gerenciamento de clientes, com consulta, edição, exclusão e busca. Também foram criadas telas demonstrativas para outras áreas da operação.</p>
+            </div>
+            <div class="project-footer">
+              <div class="tech-list" aria-label="Tecnologias utilizadas">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://felipesouza28.github.io/Painel-de-Controle-Dashboard-/" target="_blank" rel="noopener noreferrer">Abrir demonstração <b aria-hidden="true">↗</b></a>
+                <a href="https://github.com/Felipesouza28/Painel-de-Controle-Dashboard-" target="_blank" rel="noopener noreferrer">Ver código <b aria-hidden="true">↗</b></a>
+              </div>
+            </div>
+          </div>
+          <aside class="project-side">
+            <span class="side-kicker">Visão do projeto</span>
+            <div class="side-stat">
+              <span>Tipo</span>
+              <strong>Painel de gestão</strong>
+            </div>
+            <div class="side-stat">
+              <span>Objetivo</span>
+              <strong>Organizar clientes e rotinas de serviço</strong>
+            </div>
+            <div class="side-stat">
+              <span>Natureza</span>
+              <strong>Protótipo funcional</strong>
+            </div>
+            <p class="project-disclaimer">A demonstração armazena contas e dados localmente no navegador. Não é um sistema pronto para produção.</p>
+          </aside>
+        </article>
+
+        <div class="project-grid">
+          <article class="project-card project-itechub">
+            <div class="project-card-top">
+              <span class="project-number">02</span>
+              <span class="project-type">Projeto acadêmico</span>
+            </div>
+            <p class="project-category">Plataforma web</p>
+            <h3>Itechub</h3>
+            <p class="project-summary">
+              Plataforma para pesquisar e encontrar assistências técnicas, reunindo categorias de equipamentos, busca, listagem de empresas, perfis e localização em mapa.
+            </p>
+            <div class="project-card-bottom">
+              <div class="tech-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <div class="project-links">
+                <a href="https://felipesouza28.github.io/Itechub_/" target="_blank" rel="noopener noreferrer">Demonstração ↗</a>
+                <a href="https://github.com/Felipesouza28/Itechub_" target="_blank" rel="noopener noreferrer">Código ↗</a>
+              </div>
             </div>
           </article>
 
-          <article class="work-item work-itechub">
-            <div class="work-number">02</div>
-            <div class="work-content">
-              <div class="work-meta"><span>Projeto acadêmico</span><span>Plataforma web</span></div>
-              <h3>Itechub</h3>
-              <p>
-                Plataforma para pesquisar e encontrar assistências técnicas. A interface reúne categorias de equipamentos, busca, listagem de empresas, perfis de assistência e localização em mapa.
-              </p>
-              <ul class="tech-list" aria-label="Tecnologias utilizadas">
-                <li>HTML</li><li>CSS</li><li>JavaScript</li>
-              </ul>
+          <article class="project-card project-matchbook">
+            <div class="project-card-top">
+              <span class="project-number">03</span>
+              <span class="project-type">Projeto acadêmico</span>
             </div>
-            <div class="work-actions">
-              <a href="https://felipesouza28.github.io/Itechub_/" target="_blank" rel="noopener noreferrer">Ver demonstração <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/Felipesouza28/Itechub_" target="_blank" rel="noopener noreferrer">Código no GitHub <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
-
-          <article class="work-item work-matchbook">
-            <div class="work-number">03</div>
-            <div class="work-content">
-              <div class="work-meta"><span>Projeto acadêmico</span><span>Plataforma web</span></div>
-              <h3>MatchBook</h3>
-              <p>
-                Protótipo de uma plataforma para conectar leitores interessados em trocar livros. O projeto apresenta um catálogo de títulos e um fluxo para descobrir livros e combinar trocas.
-              </p>
-              <ul class="tech-list" aria-label="Tecnologias utilizadas">
-                <li>HTML</li><li>CSS</li><li>JavaScript</li>
-              </ul>
-            </div>
-            <div class="work-actions">
-              <a href="https://felipesouza28.github.io/match_book/" target="_blank" rel="noopener noreferrer">Ver demonstração <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/Felipesouza28/match_book" target="_blank" rel="noopener noreferrer">Código no GitHub <span aria-hidden="true">↗</span></a>
+            <p class="project-category">Plataforma web</p>
+            <h3>MatchBook</h3>
+            <p class="project-summary">
+              Protótipo para conectar leitores interessados em trocar livros, com catálogo de títulos e fluxo para descobrir livros e combinar trocas.
+            </p>
+            <div class="project-card-bottom">
+              <div class="tech-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <div class="project-links">
+                <a href="https://felipesouza28.github.io/match_book/" target="_blank" rel="noopener noreferrer">Demonstração ↗</a>
+                <a href="https://github.com/Felipesouza28/match_book" target="_blank" rel="noopener noreferrer">Código ↗</a>
+              </div>
             </div>
           </article>
         </div>
 
-        <div class="work-footer">
-          <span>Mais código e experimentos</span>
-          <a href="https://github.com/Felipesouza28" target="_blank" rel="noopener noreferrer">Explorar GitHub <span aria-hidden="true">↗</span></a>
+        <div class="all-projects">
+          <span>Quer ver mais código e experimentos?</span>
+          <a href="https://github.com/Felipesouza28" target="_blank" rel="noopener noreferrer">Acesse meu GitHub <b aria-hidden="true">↗</b></a>
         </div>
       </div>
     </section>
 
-    <section class="section skills-section" id="competencias" aria-labelledby="skills-title">
+    <section class="section capabilities-section" id="atuacao" aria-labelledby="capabilities-title">
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">02 / Ferramentas de trabalho</p>
-            <h2 id="skills-title">Competências<span class="heading-period">.</span></h2>
+            <p class="section-kicker">02 <span>/</span> Como posso contribuir</p>
+            <h2 id="capabilities-title">Áreas de <em>atuação.</em></h2>
           </div>
-          <p class="section-summary">
-            Tecnologias e ferramentas que fazem parte da minha prática e dos projetos que desenvolvo.
+          <p class="section-description">
+            Uma visão direta das atividades e ferramentas que fazem parte da minha experiência atual.
           </p>
         </div>
 
-        <div class="skills-grid">
-          <article class="skill">
-            <span class="skill-index">01</span>
-            <h3>Desenvolvimento front-end</h3>
-            <p>Construção da estrutura e apresentação de páginas, com atenção à responsividade e à organização do código.</p>
-            <ul class="tech-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        <div class="capability-list">
+          <article class="capability">
+            <span class="capability-index">01</span>
+            <div class="capability-copy">
+              <h3>Criação e manutenção de sites</h3>
+              <p>Montagem de páginas, ajustes de conteúdo e personalização de sites em WordPress.</p>
+            </div>
+            <div class="capability-tools"><span>WordPress</span><span>Elementor</span></div>
           </article>
-          <article class="skill">
-            <span class="skill-index">02</span>
-            <h3>Criação de sites</h3>
-            <p>Montagem, personalização e manutenção de páginas e sites em sistemas de gerenciamento de conteúdo.</p>
-            <ul class="tech-list"><li>WordPress</li><li>Elementor</li></ul>
+          <article class="capability">
+            <span class="capability-index">02</span>
+            <div class="capability-copy">
+              <h3>Desenvolvimento front-end</h3>
+              <p>Estruturação de páginas e interfaces com atenção à organização, responsividade e experiência de uso.</p>
+            </div>
+            <div class="capability-tools"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
           </article>
-          <article class="skill">
-            <span class="skill-index">03</span>
-            <h3>Ferramentas</h3>
-            <p>Ferramentas usadas no desenvolvimento, controle de versões e organização dos projetos.</p>
-            <ul class="tech-list"><li>Git</li><li>GitHub</li><li>VS Code</li></ul>
+          <article class="capability">
+            <span class="capability-index">03</span>
+            <div class="capability-copy">
+              <h3>Ajustes e aprimoramentos</h3>
+              <p>Melhorias visuais e funcionais em páginas existentes, organização de seções e correções de apresentação.</p>
+            </div>
+            <div class="capability-tools"><span>Layout</span><span>Responsividade</span></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section journey-section" id="trajetoria" aria-labelledby="journey-title">
+    <section class="section experience-section" id="experiencia" aria-labelledby="experience-title">
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">03 / Caminho profissional</p>
-            <h2 id="journey-title">Trajetória<span class="heading-period">.</span></h2>
+            <p class="section-kicker">03 <span>/</span> Caminho profissional</p>
+            <h2 id="experience-title">Experiência & <em>formação.</em></h2>
           </div>
-          <p class="section-summary">
-            Minha evolução acontece na combinação entre experiência prática, estudo e desenvolvimento de projetos.
+          <p class="section-description">
+            Aprendizado contínuo entre a rotina profissional, a formação acadêmica e a prática em projetos.
           </p>
         </div>
 
-        <div class="journey-grid">
-          <div class="journey-column">
-            <p class="column-label">Experiência</p>
-            <article class="journey-entry">
-              <span class="entry-marker" aria-hidden="true"></span>
+        <div class="experience-grid">
+          <div class="experience-column">
+            <p class="column-title">Experiência profissional</p>
+            <article class="experience-entry">
+              <span class="timeline-dot" aria-hidden="true"></span>
               <div>
                 <h3>Estagiário de programação</h3>
-                <p class="entry-place">Conectando Pessoas</p>
-                <p class="entry-description">Ajustes, criação e manutenção de páginas web utilizando WordPress e Elementor.</p>
+                <p class="entry-company">Conectando Pessoas</p>
+                <p class="entry-text">Atuação em ajustes, criação e manutenção de páginas web utilizando WordPress e Elementor.</p>
               </div>
             </article>
           </div>
-          <div class="journey-column">
-            <p class="column-label">Formação</p>
-            <article class="journey-entry">
-              <span class="entry-marker" aria-hidden="true"></span>
+          <div class="experience-column">
+            <p class="column-title">Formação</p>
+            <article class="experience-entry">
+              <span class="timeline-dot" aria-hidden="true"></span>
               <div>
                 <h3>Análise e Desenvolvimento de Sistemas</h3>
-                <p class="entry-place">Uniasselvi · Em andamento</p>
-                <p class="entry-description">Formação superior voltada à análise, desenvolvimento e construção de soluções de software.</p>
+                <p class="entry-company">Uniasselvi · Em andamento</p>
+                <p class="entry-text">Formação superior na área de tecnologia e desenvolvimento de software.</p>
               </div>
             </article>
-            <article class="journey-entry">
-              <span class="entry-marker" aria-hidden="true"></span>
+            <article class="experience-entry">
+              <span class="timeline-dot" aria-hidden="true"></span>
               <div>
                 <h3>Curso de Front-end</h3>
-                <p class="entry-place">SENAI · Concluído</p>
-                <p class="entry-description">Base de desenvolvimento para web e construção de interfaces.</p>
+                <p class="entry-company">SENAI · Concluído</p>
+                <p class="entry-text">Formação introdutória em desenvolvimento de interfaces para web.</p>
               </div>
             </article>
           </div>
@@ -245,23 +293,17 @@
       </div>
     </section>
 
-    <section class="section about-section" id="sobre" aria-labelledby="about-title">
-      <div class="container about-layout">
-        <div>
-          <p class="section-kicker">04 / Quem está por trás</p>
-          <h2 id="about-title">Sobre mim<span class="heading-period">.</span></h2>
+    <section class="about-section" id="sobre" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-heading">
+          <p class="section-kicker">04 <span>/</span> Um pouco sobre mim</p>
+          <h2 id="about-title">Prazer,<br><em>Felipe.</em></h2>
         </div>
-        <div class="about-text">
-          <p class="about-lead">
-            Acredito que uma boa experiência digital começa com uma estrutura clara e atenção ao que realmente precisa funcionar.
-          </p>
-          <p>
-            Sou Felipe Martins, profissional em início de carreira na área de tecnologia. Minha rotina combina a prática no desenvolvimento e manutenção de páginas, os estudos em Análise e Desenvolvimento de Sistemas e projetos que me permitem aprender construindo.
-          </p>
-          <p>
-            Tenho interesse em desenvolvimento front-end e criação de sites. Busco consolidar uma base técnica consistente, evoluir a qualidade das minhas entregas e participar de projetos que resolvam problemas reais.
-          </p>
-          <div class="about-links">
+        <div class="about-content">
+          <p class="about-lead">Gosto de entender como as coisas funcionam e transformar esse aprendizado em soluções que possam ser usadas de verdade.</p>
+          <p>Sou um profissional em início de carreira na área de tecnologia. Minha rotina combina a prática no desenvolvimento e manutenção de páginas, os estudos em Análise e Desenvolvimento de Sistemas e projetos que me permitem aprender construindo.</p>
+          <p>Quero seguir evoluindo em desenvolvimento web, aprofundar minha base técnica e contribuir com equipes e projetos que valorizem organização, colaboração e qualidade na entrega.</p>
+          <div class="about-socials">
             <a href="https://www.linkedin.com/in/felipe-de-souza-martins-90ab7222a/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
             <a href="https://github.com/Felipesouza28" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
           </div>
@@ -270,11 +312,11 @@
     </section>
 
     <section class="contact-section" id="contato" aria-labelledby="contact-title">
-      <div class="container contact-layout">
+      <div class="container contact-grid">
         <div>
-          <p class="section-kicker">05 / Próximo passo</p>
-          <h2 id="contact-title">Vamos construir<br><em>algo que faça sentido.</em></h2>
-          <p class="contact-copy">Estou aberto a conversas sobre oportunidades, colaboração e projetos web.</p>
+          <p class="section-kicker">05 <span>/</span> Contato</p>
+          <h2 id="contact-title">Vamos conversar<br><em>sobre o próximo projeto?</em></h2>
+          <p class="contact-description">Estou aberto a oportunidades profissionais, colaborações e conversas sobre projetos web.</p>
         </div>
         <div class="contact-details">
           <a class="contact-email" href="mailto:felipeffsm@gmail.com">felipeffsm@gmail.com <span aria-hidden="true">↗</span></a>
@@ -290,7 +332,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <a class="footer-brand" href="#inicio">Felipe Martins<span>.</span></a>
-      <p>Brasília, DF · <span data-current-year>2026</span></p>
+      <span>Brasília, DF · <span data-current-year>2026</span></span>
       <a class="back-top" href="#inicio">Voltar ao início ↑</a>
     </div>
   </footer>
